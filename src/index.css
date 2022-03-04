@@ -8,7 +8,11 @@ ol, ul {
 }
 
 .entire-board {
-  padding: 10vh 0 0 33vw;
+  /*padding: 10vh 0 0 33vw;*/
+  position: fixed;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
 }
 
 .board-row:after {
@@ -34,6 +38,20 @@ ol, ul {
   padding: 0;
   text-align: center;
   width: 150px;
+}
+
+@media (max-width: 900px) {
+  .square {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (max-height: 570px) {
+  .square {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 .square:focus {
