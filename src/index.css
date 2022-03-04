@@ -8,11 +8,10 @@ ol, ul {
 }
 
 .entire-board {
-  /*padding: 10vh 0 0 33vw;*/
   position: fixed;
-left: 50%;
-top: 50%;
-transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .board-row:after {
