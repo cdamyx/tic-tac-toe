@@ -69,7 +69,7 @@ class Game extends React.Component {
       if (calculateWinner(squares) || squares[i]) {
         return;
       }
-    squares[i] = this.state.xIsNext ? X : 'O';
+    squares[i] = this.state.xIsNext ? <img src={X} width="150px" height="150px"></img> : 'O';
     this.setState({
       history: history.concat([{
         squares: squares,
