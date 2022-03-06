@@ -11,7 +11,7 @@ function Square(props){
       className="square"
       onClick={props.onClick}
     >
-      {props.value}
+      <img className="icon" src={props.value}></img>
     </button>
   );
 }
@@ -69,7 +69,7 @@ class Game extends React.Component {
       if (calculateWinner(squares) || squares[i]) {
         return;
       }
-    squares[i] = this.state.xIsNext ? <img src={X} width="150px" height="150px"></img> : 'O';
+    squares[i] = this.state.xIsNext ? X : O;
     this.setState({
       history: history.concat([{
         squares: squares,
@@ -104,9 +104,9 @@ class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = 'Winner: ' + winner;
+      status = 'Winner: ' + (this.state.xIsNext ? 'Player 2' : 'Player 1');
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? X : 'O');
+      status = 'Next player: ' + (this.state.xIsNext ? 'Player 1' : 'Player 2');
     }
 
     return (
