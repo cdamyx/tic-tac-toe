@@ -1,12 +1,21 @@
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 0;
+  color: white;
 }
 
 #root {
   background-color:  black;
   height: 100vh;
   width: 100vw;
+}
+
+.title {
+  position: fixed;
+  left: 50%;
+  top: 2%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
 }
 
 ol, ul {
@@ -18,7 +27,6 @@ ol, ul {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /*background-color: black;*/
 }
 
 .board-row:after {
@@ -36,10 +44,6 @@ ol, ul {
   border-style: solid;
   border-color: #67c8d0 #ee1d51;
   border-width: 2px;
-  /*border-top: 1px #67c8d0;
-  border-right: 1px #ee1d51;
-  border-bottom: 1px #67c8d0;
-  border-left: 1px #ee1d51;*/
   float: left;
   font-size: 24px;
   font-weight: bold;
@@ -64,8 +68,8 @@ ol, ul {
   }
 
   .icon {
-    height: 50px;
-    width: 50px;
+    height: 46px;
+    width: 46px;
   }
 }
 
@@ -76,8 +80,8 @@ ol, ul {
   }
 
   .icon {
-    height: 50px;
-    width: 50px;
+    height: 46px;
+    width: 46px;
   }
 }
 
