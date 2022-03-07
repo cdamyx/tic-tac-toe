@@ -18,6 +18,22 @@ body {
   font-size: 3rem;
 }
 
+.player {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+
+.show-moves {
+  position: fixed;
+  left: 50%;
+  bottom: 0.01%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+}
+
 ol, ul {
   padding-left: 30px;
 }
@@ -71,6 +87,10 @@ ol, ul {
     height: 46px;
     width: 46px;
   }
+
+  .player {
+    bottom: 10%;
+  }
 }
 
 @media (max-height: 570px) {
@@ -82,6 +102,10 @@ ol, ul {
   .icon {
     height: 46px;
     width: 46px;
+  }
+
+  .player {
+    bottom: 10%;
   }
 }
 
@@ -99,5 +123,9 @@ ol, ul {
 }
 
 .game-info {
-  margin-left: 20px;
+  display: none;
+  position:  fixed;
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
