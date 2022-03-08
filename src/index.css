@@ -21,9 +21,9 @@ body {
 .player {
   position: fixed;
   left: 50%;
-  bottom: 1.5%;
+  bottom: 2.5%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .show-moves {
@@ -32,6 +32,16 @@ body {
   bottom: 0.01%;
   transform: translate(-50%, -50%);
   font-size: 1rem;
+}
+
+.show-button {
+  background-color: #000000;
+  border: none;
+  color: #ee1d51;
+}
+
+.show-button:hover {
+  color: #67c8d0;
 }
 
 ol, ul {
@@ -88,6 +98,10 @@ ol, ul {
     width: 46px;
   }
 
+  .title {
+    top: 10%;
+  }
+
   .player {
     bottom: 10%;
   }
@@ -102,6 +116,10 @@ ol, ul {
   .icon {
     height: 46px;
     width: 46px;
+  }
+
+  .title {
+    top: 10%;
   }
 
   .player {

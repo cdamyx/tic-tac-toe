@@ -122,7 +122,7 @@ class Game extends React.Component {
           </div>
           <div className="player">{status}</div>
           <div className="show-moves">
-            <button>Show Moves</button>
+            <button className="show-button">Show Moves</button>
           </div>
           <div className="game-info">
             <ol>{moves}</ol>
