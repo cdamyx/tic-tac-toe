@@ -42,6 +42,7 @@ body {
 
 .show-button:hover {
   color: #67c8d0;
+  cursor: pointer;
 }
 
 ol, ul {
