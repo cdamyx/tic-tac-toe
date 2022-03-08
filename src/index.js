@@ -51,7 +51,7 @@ class Board extends React.Component {
 }
 
 class Game extends React.Component {
-  constructor(props) {
+   constructor(props) {
     super(props);
     this.state = {
       history: [{
@@ -59,6 +59,8 @@ class Game extends React.Component {
       }],
       stepNumber: 0,
       xIsNext: true,
+      isHidden: true,
+      buttonText: "Show Moves",
     };
   }
 
@@ -77,6 +79,20 @@ class Game extends React.Component {
       stepNumber: history.length,
       xIsNext: !this.state.xIsNext,
     });
+  }
+
+  handleButtonClick() {
+    console.log("success");
+    console.log(this.state.isHidden);
+    // let isHidden = true;
+    // let buttonText = "Show Moves";
+
+    if(this.state.isHidden) {
+      this.setState({buttonText: "Hide Moves"});
+    } else {
+      this.setState({buttonText: "Show Moves"});
+    }
+    this.setState({isHidden: !this.state.isHidden});
   }
 
   jumpTo(step) {
@@ -122,7 +138,7 @@ class Game extends React.Component {
           </div>
           <div className="player">{status}</div>
           <div className="show-moves">
-            <button className="show-button">Show Moves</button>
+            <button className="show-button" onClick={() => this.handleButtonClick()}>{this.state.buttonText}</button>
           </div>
           <div className="game-info">
             <ol>{moves}</ol>
