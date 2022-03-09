@@ -89,8 +89,10 @@ class Game extends React.Component {
 
     if(this.state.isHidden) {
       this.setState({buttonText: "Hide Moves"});
+      //display the moves
     } else {
       this.setState({buttonText: "Show Moves"});
+      //hide the moves
     }
     this.setState({isHidden: !this.state.isHidden});
   }
