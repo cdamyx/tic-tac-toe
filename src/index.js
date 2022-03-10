@@ -82,17 +82,13 @@ class Game extends React.Component {
   }
 
   handleButtonClick() {
-    console.log("success");
-    console.log(this.state.isHidden);
-    // let isHidden = true;
-    // let buttonText = "Show Moves";
 
     if(this.state.isHidden) {
       this.setState({buttonText: "Hide Moves"});
-      //display the moves
+      document.querySelector(".game-info").style.display = "block";
     } else {
       this.setState({buttonText: "Show Moves"});
-      //hide the moves
+      document.querySelector(".game-info").style.display = "none";
     }
     this.setState({isHidden: !this.state.isHidden});
   }
@@ -128,8 +124,6 @@ class Game extends React.Component {
     }
 
     return (
-      
-
         <div className="game">
           <div className="game-board">
             <h1 className="title">TikTokToe</h1>
@@ -146,7 +140,6 @@ class Game extends React.Component {
             <ol>{moves}</ol>
           </div>
         </div>
-      
     );
   }
 }
@@ -162,6 +155,7 @@ function calculateWinner(squares) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+  
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
