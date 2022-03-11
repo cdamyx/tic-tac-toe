@@ -11,7 +11,7 @@ function Square(props){
       className="square"
       onClick={props.onClick}
     >
-      <img className="icon" src={props.value} alt="TikTok logo"></img>
+      <img className="icon" src={props.value} alt=""></img>
     </button>
   );
 }
